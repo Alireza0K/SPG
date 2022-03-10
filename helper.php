@@ -11,13 +11,20 @@ function Generate_password($processor){
         $alphabet = !isset($_POST["Alphabet"]) ? null : $_POST["Alphabet"] ;  
         $object = !isset($_POST["Object"]) ? null : $_POST["Object"];
         $number = !isset($_POST["Number"]) ? null : $_POST["Number"];  
+        // Push in to the Globals
+        $GLOBALS["password_digits"] = $password_digits;
+        $GLOBALS["alphabet"] = $alphabet;
+        $GLOBALS["object"] = $object;
+        $GLOBALS["number"] = $number;
         // Concat and explode
         $ability = $alphabet ."+". $object ."+". $number;
         // Push all information for process
         if(is_callable($processor)){
             $all_informaition = (object) array(
-                "Password_digits" => (object)["Number"=>$password_digits],
-                "Abilitys" => (object)["Ability"=>$ability]
+                "Information" => (object)[
+                    "Password_digits" => $password_digits,
+                    "Abilities" => $ability
+                ]
             );
             call_user_func($processor, $all_informaition);
         }else{
@@ -32,8 +39,8 @@ function Process_password($Stuffs){
     $objects = "!@#$%^&*()_+=-;:'?>/.<,";
     $number = "1234567890";
     // Convert array to string for continue
-    $password_digits = $Stuffs->Password_digits->Number;
-    $abilities = $Stuffs->Abilitys->Ability;
+    $password_digits = $Stuffs->Information->Password_digits;
+    $abilities = $Stuffs->Information->Abilities;
     //Switch for Better
     switch ($abilities) {
         case "Alphabet+Object+Number":
