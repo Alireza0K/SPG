@@ -19,7 +19,7 @@
             <div class="col-5 ">
                 <div class="input-group" style="margin:15px 0px;">
                     <span class="input-group-text">Enter digits of password character</span>
-                    <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits" value="<?php echo $password_digits;?>">
+                    <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits" value="<?php echo !isset($password_digits) ? null : $password_digits ;?>">
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="Alphabet" <?php echo !isset($alphabet) ? null :"checked"?>>
