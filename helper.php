@@ -83,6 +83,6 @@ function Process_password($Stuffs){
             }
             break;
     }
-    echo $password;
+    $GLOBALS["Password"] = $password;
 }
 Generate_password("Process_password");
