@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">k
+    <link rel="stylesheet" href="style.css">
     <title><?php echo page_home;?></title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
@@ -14,12 +14,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <body>
     <div class=" container" >
-        <form method="POST" style="margin:15px 0px;">
+        <form action="" method="POST" style="margin:15px 0px;">
         <div class="d-flex justify-content-center">
             <div class="col-5 ">
                 <div class="input-group" style="margin:15px 0px;">
                     <span class="input-group-text">Enter digits of password character</span>
-                    <input type="text" aria-label="First name" class="form-control" placeholder="12">
+                    <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits">
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="Alphabet">
@@ -41,7 +41,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-5 ">
                 <h5>Select You're password :</h5>
-                <h5 id="complete-password"it >Hello</h5>
+                <h5 id="complete-password"><?php echo "Hello";?></h5>
             </div>  
         </div>       
     </div>
