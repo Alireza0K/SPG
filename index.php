@@ -19,18 +19,18 @@
             <div class="col-5 ">
                 <div class="input-group" style="margin:15px 0px;">
                     <span class="input-group-text">Enter digits of password character</span>
-                    <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits">
+                    <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits" value="<?php echo !isset($password_digits) ? null : $password_digits ;?>">
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="Alphabet">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="Alphabet" <?php echo !isset($alphabet) ? null :"checked"?>>
                     <label class="form-check-label" for="inlineCheckbox1">Alphabet</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="Object" value="Object">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="Object" value="Object" <?php echo !isset($object) ? null :"checked"?>>
                     <label class="form-check-label" for="inlineCheckbox2">Object</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="Number" value="Number">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="Number" value="Number" <?php echo !isset($number) ? null :"checked"?>>
                     <label class="form-check-label" for="inlineCheckbox3">Number</label>
                 </div>
                 <br>
@@ -41,7 +41,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-5 ">
                 <h5>Select You're password :</h5>
-                <h5 id="complete-password"><?php echo !isset($Password) ? null :$Password ;?></h5>
+                <h6 id="complete-password"><?php echo !isset($Password) ? null :$Password ;?></h6>
             </div>  
         </div>       
     </div>
