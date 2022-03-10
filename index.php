@@ -41,7 +41,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-5 ">
                 <h5>Select You're password :</h5>
-                <h5 id="complete-password"><?php echo $Password;?></h5>
+                <h5 id="complete-password"><?php echo !isset($Password) ? null :$Password ;?></h5>
             </div>  
         </div>       
     </div>
