@@ -23,8 +23,66 @@ function Generate_password($processor){
     }
 }
 function Process_password($Stuffs){
+    $password = "";
+    //  Definition
+    $alphabet = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    $objects = "!@#$%^&*()_+=-;:'?>/.<,";
+    $number = "1234567890";
+    // Convert array to string for continue
     $password_digits = $Stuffs->Password_digits->Number;
     $abilities = $Stuffs->Abilitys->Ability;
-    
+    //Switch for Better
+    switch ($abilities) {
+        case "Alphabet+Object+Number":
+            $this_case = $alphabet . $objects . $number;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "Alphabet++Number":
+            $this_case = $alphabet . $number;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "Alphabet+Object+":
+            $this_case = $alphabet . $objects ;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "Alphabet++":
+            $this_case = $alphabet ;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "+Object+Number":
+            $this_case = $objects . $number;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "++Number":
+            $this_case = $number;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "+Object+":
+            $this_case = $objects;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+    }
+    echo $password;
 }
 Generate_password("Process_password");
