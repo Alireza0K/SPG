@@ -23,15 +23,24 @@
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="Alphabet" <?php echo !isset($alphabet) ? null :"checked"?>>
-                    <label class="form-check-label" for="inlineCheckbox1">Alphabet</label>
+                    <label class="form-check-label" for="inlineCheckbox1">Alphabet (a.b.c.d)</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="Object" value="Object" <?php echo !isset($object) ? null :"checked"?>>
-                    <label class="form-check-label" for="inlineCheckbox2">Object</label>
+                    <label class="form-check-label" for="inlineCheckbox2">Object (@!#$)</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="Number" value="Number" <?php echo !isset($number) ? null :"checked"?>>
-                    <label class="form-check-label" for="inlineCheckbox3">Number</label>
+                    <label class="form-check-label" for="inlineCheckbox3">Number </label>
+                </div>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="Alphabet-Small" value="Alphabet-Small" <?php echo !isset($alphabet_small) ? null :"checked"?>>
+                    <label class="form-check-label" for="inlineCheckbox4">Alphabet (A.B.C.D)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="Object-2" value="Object-2" <?php echo !isset($object_2) ? null :"checked"?>>
+                    <label class="form-check-label" for="inlineCheckbox5">Object ({} , () , [])</label>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-md btn-secondary" style="margin: 10px 0px; display:inline;">Generate</button>
