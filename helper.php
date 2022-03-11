@@ -56,6 +56,13 @@ function Process_password($Stuffs){
                 $password  .= $this_case[rand(0,$count_how_many)-1];
             }
             break;
+        case "Alphabet+Object+Number++":
+            $this_case = $alphabet_small . $objects . $number ;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
         case "Alphabet++Number+Alphabet-Small+Object-2":
             $this_case = $alphabet . $number . $alphabet_small . $objects_2;
             $count_how_many = strlen($this_case);
@@ -84,7 +91,7 @@ function Process_password($Stuffs){
                 $password  .= $this_case[rand(0,$count_how_many)-1];
             }
             break;
-        case "++Number+Alphabet-Small+":
+        case "Alphabet++Number++":
             $this_case = $alphabet_small . $number ;
             $count_how_many = strlen($this_case);
             for($nop = 0 ; $nop <= $password_digits ; $nop++){
@@ -147,8 +154,36 @@ function Process_password($Stuffs){
                 $password  .= $this_case[rand(0,$count_how_many)-1];
             }
             break;
+        case "Alphabet+Object+++":
+            $this_case = $alphabet_small . $objects_2;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "++Number+Alphabet-Small+":
+            $this_case = $alphabet . $number;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
         case "Alphabet++Number+Alphabet-Small+":
             $this_case = $alphabet .  $number . $alphabet_small ;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "Alphabet++++Object-2":
+            $this_case = $alphabet_small . $objects_2;
+            $count_how_many = strlen($this_case);
+            for($nop = 0 ; $nop <= $password_digits ; $nop++){
+                $password  .= $this_case[rand(0,$count_how_many)-1];
+            }
+            break;
+        case "Alphabet+++Alphabet-Small+":
+            $this_case = $alphabet_small . $alphabet;
             $count_how_many = strlen($this_case);
             for($nop = 0 ; $nop <= $password_digits ; $nop++){
                 $password  .= $this_case[rand(0,$count_how_many)-1];
