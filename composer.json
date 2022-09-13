@@ -1,0 +1,10 @@
+{
+    "name": "leyla/spg",
+    "description": "This is for SPG Services",
+    "autoload": {
+        "psr-4": {
+            "Leyla\\Spg\\": "App/"
+        }
+    },
+    "require": {}
+}
