@@ -20,31 +20,26 @@
                 <div class="col-5 ">
                     <div class="input-group" style="margin:15px 0px;">
                         <span class="input-group-text">Enter digits of password character</span>
-                        <input type="text" aria-label="First name" class="form-control" placeholder="12" name="password_digits" value="">
+                        <input type="text" aria-label="First name" class="form-control" placeholder="for example 12" name="password_digits" value="<?php echo $_POST['password_digits'] ?? null?>">
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabe-SmallCase" value="true">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet" value="true" <?php if($_POST['Alphabet'] ?? null == true){echo "checked";}?>>
                         <label class="form-check-label" for="inlineCheckbox1">Alphabet (a.b.c.d)</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Alphabet-BiggerCase" value="true">
-                        <label class="form-check-label" for="inlineCheckbox1">Alphabet (A.B.C.D)</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Number" value="true">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Number" value="true" <?php if($_POST['Number'] ?? null == true){echo "checked";}?>>
                         <label class="form-check-label" for="inlineCheckbox1">Numbers (1.2.3.4)</label>
                     </div>
 
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Element" value="true">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="Element" value="true" <?php if($_POST['Element'] ?? null == true){echo "checked";}?>>
                         <label class="form-check-label" for="inlineCheckbox1">Element (!@#$%^&*()}{?><}~) </label>
                     </div>
 
                     <br>
-                    <button type="submit" class="btn btn-md btn-secondary" style="margin: 10px 0px; display:inline;">Generate</button>
+                    <button type="submit" class="btn btn-md btn-warning" style="margin: 10px 0px; display:inline;">Generate</button>
                 </div>
         </form>
     </div>
@@ -57,7 +52,7 @@
             </div>
 
             <div class="col-auto">
-                <input type="text" class="form-control" id="myInput" value="Test Password">
+                <input type="text" class="form-control" placeholder="you're password is here" id="myInput" value="<?php echo $lastResult;?>">
             </div>
 
             <div class="col-auto">
@@ -74,7 +69,7 @@
 
             // Select the text field
             copyText.select();
-            copyText.setSelectionRange(0, 99999); // For mobile devices
+            copyText.setSelectionRange(0, 99); // For mobile devices
 
             // Copy the text inside the text field
             navigator.clipboard.writeText(copyText.value);
