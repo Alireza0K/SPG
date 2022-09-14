@@ -16,6 +16,13 @@ class Request
         return $getDataFromUri;
     }
 
+    private function dataFromPost()
+    {
+        $dataFromPost = $_POST;
+
+        return $dataFromPost;
+    }
+
     public function setPackageToData($package)
     {
         $this->data = $package;
@@ -48,5 +55,10 @@ class Request
     public function getAllData()
     {
         return $this->data;
+    }
+
+    public function getPostData()
+    {
+        return $this->dataFromPost();
     }
 }
