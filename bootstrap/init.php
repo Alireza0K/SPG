@@ -6,6 +6,9 @@ define("MAIN_PATH", "/Applications/XAMPP/xamppfiles/htdocs/SPG/");
 
 require "vendor/autoload.php";
 
+use App\Requests\Request;
+$requests = new Request();
+
 $dotenv = Dotenv\Dotenv::createImmutable(MAIN_PATH);
 $dotenv->load();
 
