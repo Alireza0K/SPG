@@ -1,3 +1,6 @@
+## User Interface of SPG
+![Interface of SPG](/image/SPG-Image.png "Interface of SPG")
+
 ## What is SPG
 * SPG mean Strong Password Generator.
 * SPG Generate Strong password with some stuff.
