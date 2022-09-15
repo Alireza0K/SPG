@@ -1,0 +1,11 @@
+{
+    "name": "leyla/spg",
+    "description": "This is for SPG Services",
+    "autoload": {
+        "psr-4": {"App\\":"App/"}       
+    },
+    "require": {
+        "sebastian/environment": "^5.1",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
