@@ -39,7 +39,7 @@
                     </div>
 
                     <br>
-                    <button type="submit" class="btn btn-md btn-warning" style="margin: 10px 0px; display:inline;">Generate</button>
+                    <button type="submit" name="SendToGenerate" class="btn btn-md btn-warning" style="margin: 10px 0px; display:inline;">Generate</button>
                 </div>
         </form>
     </div>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="col-auto">
-                <input type="text" class="form-control" placeholder="you're password is here" id="myInput" value="<?php echo $lastResult;?>">
+                <input type="text" class="form-control" placeholder="you're password is here" id="myInput" value="<?php echo $lastResult ?? null;?>">
             </div>
 
             <div class="col-auto">
